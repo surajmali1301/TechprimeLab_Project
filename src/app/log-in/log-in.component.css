@@ -1,0 +1,77 @@
+.pName {
+  position: fixed;
+  size: 100px;
+  left: 680px;
+  top: 250px;
+  z-index: 1;
+  color: white;
+}
+.logBg {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  position: fixed;
+  bottom: 190px;
+}
+.logo {
+  position: fixed;
+  left: 725px;
+  bottom: 475px;
+  z-index: 1;
+  width: 8%;
+}
+small {
+  position: relative;
+  left: 50px;
+}
+.logForm {
+  background-color: white;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.8);
+  /* border: 1px solid; */
+  border-radius: 10px;
+  padding: 10px;
+  padding-bottom: 50px;
+  height: 360px;
+  width: 360px;
+  position: fixed;
+  top: 300px;
+  left: 600px;
+}
+.head {
+  margin-top: 40px;
+  position: relative;
+  left: 100px;
+  bottom: 10px;
+}
+.form,
+.form-control {
+  /* margin-left: 30px; */
+  font-family: Arial;
+}
+.form-control {
+  border: 1px solid rgb(167, 166, 166);
+}
+.btn {
+  background-color: rgba(0, 0, 255, 0.911);
+  margin-left: 340px;
+  border-radius: 40px;
+  width: 170px;
+  position: relative;
+  top: 10px;
+  right: 250px;
+  margin-bottom: 10px;
+}
+.fPass {
+  margin-left: 180px;
+  position: relative;
+  bottom: 20px;
+  left: 20px;
+  font-size: 15px;
+}
+.error-message{
+  font-size: 16px;
+  position: fixed;
+  top: 670px;
+  left: 710px;
+  color: red;
+}

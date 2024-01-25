@@ -1,0 +1,147 @@
+.logo {
+  height: 100px;
+  position: relative;
+  top: 20px;
+  left: 800px;
+  z-index: 1;
+}
+.form-select {
+  height: 50px;
+  position: relative;
+  right: 80px;
+  top: 10px;
+}
+.form-control,
+.form-select {
+  border: 1px solid rgba(0, 0, 0, 0.589);
+}
+
+.form-control {
+  width: 100%;
+  height: 100px;
+}
+
+.date2,
+.date {
+  position: relative;
+  top: 55px;
+}
+.btn {
+  position: fixed;
+  left: 1280px;
+  bottom: 490px;
+  width: 150px;
+  border-radius: 30px;
+}
+p {
+  font-size: 20px;
+  position: absolute;
+  left: 150px;
+  top: 150px;
+}
+.col-4 {
+  margin-top: 40px;
+  position: relative;
+  left: 100px;
+  width: 400px;
+}
+#validationCustomEndDate1 {
+  height: 50px;
+  width: 380px;
+  position: relative;
+  right: 180px;
+  bottom: 29px;
+}
+#validationCustomEndDate {
+  height: 50px;
+  position: relative;
+  top: 13px;
+  right: 90px;
+}
+.date-label2 {
+  font-size: 15px;
+  position: relative;
+  bottom: 26px;
+  right: 270px;
+}
+.date-label {
+  font-size: 15px;
+  position: relative;
+  top: 10px;
+  right: 170px;
+}
+.info {
+  position: relative;
+  top: 10px;
+  right: 230px;
+  font-size: 15px;
+}
+.form {
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.8);
+  border-radius: 15px;
+  width: 93%;
+  height: 640px;
+  background-color: white;
+  padding: 10px;
+  padding-right: 20px;
+  position: fixed;
+  top: 80px;
+  left: 80px;
+  margin-top: 50px;
+  z-index: 1;
+}
+.headBg {
+  position: fixed;
+  bottom: -60px;
+  left: 60px;
+  height: 200%;
+  width: 98%;
+}
+/* sidebar.component.css */
+
+.sidebar {
+  height: 140%;
+  width: 57px;
+  position: fixed;
+  top: 0;
+  bottom: 130px;
+  left: 2px;
+  background-color: #fff;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 1);
+  padding-top: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  position: relative;
+  top: 450px;
+}
+
+.sidebar li {
+  padding: 10px;
+  margin-top: 10px;
+  padding-left: 15px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #ffff;
+}
+.cActive {
+  
+}
+.text-danger{
+  position: relative;
+  z-index: -1;
+}
+.themeV{
+  position: relative;
+  left: 200px;
+  z-index: 1;
+}

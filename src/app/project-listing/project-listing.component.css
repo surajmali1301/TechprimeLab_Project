@@ -1,0 +1,114 @@
+.headBg {
+  width: 100%;
+  position: relative;
+  left: 65px;
+}
+h2 {
+  color: white;
+  position: relative;
+  left: 120px;
+  bottom: 200px;
+}
+.logo {
+  position: relative;
+  left: 800px;
+  bottom: 130px;
+  width: 100px;
+}
+.bi{
+  position: relative;
+  width: 50px;
+  height: 25px;
+  top:42px;
+  left: 15px;
+  z-index: 1;
+}
+.search-bar {
+  height: 80px;
+  position: relative;
+  z-index: -1;
+  left: 10px;
+}
+.example-form {
+  width: 50%;
+  height: 50%;
+  position: relative;
+  bottom: 100px;
+  left: 100px;
+}
+
+.example-full-width {
+  width: 20%;
+  position: relative;
+  left: 30px;
+}
+.project-list {
+  background-color: white;
+  box-shadow: 0 5px 8px black;
+  border-radius: 20px;
+  width: 93%;
+  height: 100%;
+  position: fixed;
+  left: 90px;
+  top: 140px;
+}
+.col-1 {
+}
+.project-name {
+  margin-left: 10px;
+}
+th {
+  font-size: 13px;
+}
+#pInfo {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 13px;
+  font-weight: bold;
+}
+#pInfo1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.btn {
+  position: relative;
+  width: 5%;
+  padding-bottom: 10px;
+  height: 1%;
+  border-radius: 25px;
+  top: 10px;
+}
+.sidebar {
+  height: 140%;
+  width: 57px;
+  position: fixed;
+  top: 0;
+  bottom: 130px;
+  left: 2px;
+  background-color: #fff;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 1);
+  padding-top: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  position: relative;
+  top: 450px;
+}
+
+.sidebar li {
+  padding: 10px;
+  margin-top: 10px;
+  padding-left: 15px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #ffff;
+}

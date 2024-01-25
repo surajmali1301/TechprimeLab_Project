@@ -1,0 +1,30 @@
+<p class="pName">Online Project Management</p>
+<img class="logBg" src="../../assets/login-bg-1.svg" alt="">
+<img class="logo" src="../../assets/Logo.svg" alt="">
+
+<div class="logForm">
+  <form [formGroup]="login" (ngSubmit)="onSubmit()">
+    <p class="head">Log in to get Started</p>
+
+    <div class="mb-3">
+      <label for="email" class="form">Email</label>
+      <input type="email" formControlName="email" class="form-control" id="email" aria-describedby="emailHelp">
+      <div *ngIf="email?.invalid && email?.touched">
+        <small class="text-danger" *ngIf="email?.errors?.['required']">Email is required</small>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="password" class="form">Password</label>
+      <input type="password" formControlName="password" class="form-control" id="password">
+      <div *ngIf="password?.invalid && password?.touched">
+        <small class="text-danger" *ngIf="password?.errors?.['required']">Password is required</small>
+      </div>
+    </div>
+
+    <a class="fPass" href="#">Forgot password?</a>
+    <button type="submit" class="btn btn-primary">Log In</button>
+  </form>
+</div>
+
+<small class="error-message"> {{ errorMessage }}</small>
