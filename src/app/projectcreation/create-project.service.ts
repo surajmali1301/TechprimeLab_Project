@@ -7,9 +7,12 @@ import { Observable, catchError, throwError } from 'rxjs';
 })
 export class CreateProjectService {
   apiUrl: string = 'http://localhost:3000/projectCreation/';
-
   constructor(private http: HttpClient) {}
 
+  public getProject(): Observable<any> {
+    return this.http.get<any>(this.apiUrl);
+  }
+  
   public saveProject(projectData: any): Observable<any> {
     return this.http
       .post<any>(this.apiUrl, projectData)

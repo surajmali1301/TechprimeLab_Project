@@ -3,12 +3,12 @@
 
 <nav class="sidebar">
   <ul>
-    <li><a href=""><img src="../../assets/Dashboard.svg" alt=""></a></li>
+    <li><a href=""(click)="toDashboard()"><img src="../../assets/Dashboard.svg" alt=""></a></li>
     <li><a href="" (click)="toProjectList()"><img src="../../assets/Project-list.svg" alt=""></a></li>
     <hr style=" border: 1px black solid; ">
     <li><a href=""><img class="cActive" src="../../assets/create-project-active.svg" alt="">1</a></li>
-    <li><a href="" (click)="toLogOut()"><img src="../../assets/Logout.svg" alt=""></a></li>
     <!-- Add more links as needed -->
+    <a href="" (click)="toLogOut()"><img src="../../assets/Logout.svg" class="logOut" alt=""></a>
   </ul>
 </nav>
 
@@ -19,11 +19,12 @@
       <div class="col-6">
         <input type="button" (click)="saveProject()" class="btn btn-primary" value="Save project">
         <div class="form-floating mb-3">
-          <input [class.is-invalid]="theme?.invalid && theme?.touched" formControlName="theme" type="email" class="form-control"
-            id="floatingInput" placeholder="Enter Project Theme">
-            <div *ngIf="theme?.invalid && theme?.touched">
-              <small style="color: red; position:relative;right: 270px; "*ngIf="theme?.errors?.['required']">Theme is required</small>
-            </div>
+          <input [class.is-invalid]="theme?.invalid && theme?.touched" formControlName="theme" type="email"
+            class="form-control" id="floatingInput" placeholder="Enter Project Theme">
+          <div *ngIf="theme?.invalid && theme?.touched">
+            <small style="color: red; position:relative;right: 270px; " *ngIf="theme?.errors?.['required']">Theme is
+              required</small>
+          </div>
           <label for="floatingInput">Enter Project Theme</label>
         </div>
       </div>
@@ -31,7 +32,7 @@
     <div class="row">
       <div class="col-4">
         <label class="info">Reason</label>
-        <select  [class.is-invalid]="reason?.invalid &&reason?.touched" formControlName="reason" class="form-select"
+        <select [class.is-invalid]="reason?.invalid &&reason?.touched" formControlName="reason" class="form-select"
           aria-label="Default select example">
           <option *ngFor="let string of reasonList">{{string}}</option>
         </select>
@@ -42,22 +43,25 @@
       </div>
       <div class="col-4">
         <label class="info">Type</label>
-        <select [class.is-invalid]="type?.invalid &&type?.touched" formControlName="type"  class="form-select" aria-label="Default select example">
+        <select [class.is-invalid]="type?.invalid &&type?.touched" formControlName="type" class="form-select"
+          aria-label="Default select example">
           <option *ngFor="let string of typeList">{{string}}</option>
         </select>
         <div *ngIf="type?.invalid && type?.touched">
-          <small style="color: red; position: relative;top: 10px; right: 100px;"
-            *ngIf="type?.errors?.['required']">Type is
+          <small style="color: red; position: relative;top: 10px; right: 100px;" *ngIf="type?.errors?.['required']">Type
+            is
             required</small>
         </div>
       </div>
       <div class="col-4">
         <label class="info">Division</label>
-        <select [class.is-invalid]="division?.invalid &&division?.touched" formControlName="division"  class="form-select" aria-label="Default select example">
+        <select [class.is-invalid]="division?.invalid &&division?.touched" formControlName="division"
+          class="form-select" aria-label="Default select example">
           <option *ngFor="let string of divList">{{string}}</option>
         </select>
         <div *ngIf="division?.invalid && division?.touched">
-          <small style="color: red; position: relative;top: 10px; right: 100px;" *ngIf="division?.errors?.['required']">Division is
+          <small style="color: red; position: relative;top: 10px; right: 100px;"
+            *ngIf="division?.errors?.['required']">Division is
             required</small>
         </div>
       </div>
@@ -65,35 +69,39 @@
     <div class="row">
       <div class="col-4">
         <label class="info">Category</label>
-        <select [class.is-invalid]="category?.invalid &&category?.touched" formControlName="category"  class="form-select" aria-label="Default select example">
-          <option *ngFor="let string of categoryList">One</option>
+        <select [class.is-invalid]="category?.invalid &&category?.touched" formControlName="category"
+          class="form-select" aria-label="Default select example">
+          <option *ngFor="let string of categoryList">{{string}}</option>
         </select>
         <div *ngIf="category?.invalid && category?.touched">
-          <small style="color: red; position: relative;top: 10px; right: 100px;" *ngIf="category?.errors?.['required']">Category
+          <small style="color: red; position: relative;top: 10px; right: 100px;"
+            *ngIf="category?.errors?.['required']">Category
             is
             required</small>
         </div>
       </div>
       <div class="col-4">
         <label class="info">Priority</label>
-        <select [class.is-invalid]="priority?.invalid &&priority?.touched" formControlName="priority"  class="form-select" aria-label="Default select example">
-          <option selected>Priority</option>
-          <option value="1">One</option>
+        <select [class.is-invalid]="priority?.invalid &&priority?.touched" formControlName="priority"
+          class="form-select" aria-label="Default select example">
+          <option *ngFor="let string of priorityList">{{string}}</option>
         </select>
         <div *ngIf="priority?.invalid && priority?.touched">
-          <small style="color: red; position: relative;top: 10px; right: 100px;" *ngIf="priority?.errors?.['required']">Priority
+          <small style="color: red; position: relative;top: 10px; right: 100px;"
+            *ngIf="priority?.errors?.['required']">Priority
             is
             required</small>
         </div>
       </div>
       <div class="col-4">
         <label class="info">Department</label>
-        <select [class.is-invalid]="dept?.invalid &&dept?.touched" formControlName="dept"  class="form-select" aria-label="Default select example">
-          <option selected>Department</option>
-          <option value="1">One</option>
+        <select [class.is-invalid]="dept?.invalid &&dept?.touched" formControlName="dept" class="form-select"
+          aria-label="Default select example">
+          <option *ngFor="let string of deptList">{{string}}</option>
         </select>
         <div *ngIf="dept?.invalid && dept?.touched">
-          <small style="color: red; position: relative;top: 10px; right: 100px;" *ngIf="dept?.errors?.['required']">Department
+          <small style="color: red; position: relative;top: 10px; right: 100px;"
+            *ngIf="dept?.errors?.['required']">Department
             is
             required</small>
         </div>
@@ -102,9 +110,11 @@
     <div class="row">
       <div class="col-4">
         <label for="validationCustomEndDate" class="date-label">Start Date as per Project Plan</label>
-        <input  [class.is-invalid]="sDate?.invalid &&sDate?.touched" formControlName="startDate" type="date" class="form-control" id="validationCustomEndDate" required>
+        <input [class.is-invalid]="sDate?.invalid &&sDate?.touched" formControlName="startDate" type="date"
+          class="form-control" id="validationCustomEndDate" required>
         <div *ngIf="sDate?.invalid && sDate?.touched">
-          <small style="color: red; position: relative;top: 10px; right: 200px;" *ngIf="sDate?.errors?.['required']">Start Date
+          <small style="color: red; position: relative;top: 10px; right: 200px;"
+            *ngIf="sDate?.errors?.['required']">Start Date
             is
             required</small>
         </div>
@@ -112,9 +122,11 @@
       <div class="col-4">
         <div class="col-4">
           <label for="validationCustomEndDate" class="date-label2">End Date as per Project Plan</label>
-          <input  [class.is-invalid]="eDate?.invalid &&eDate?.touched" formControlName="endDate" type="date" class="form-control" id="validationCustomEndDate1" required>
+          <input [class.is-invalid]="eDate?.invalid &&eDate?.touched" formControlName="endDate" type="date"
+            class="form-control" id="validationCustomEndDate1" required>
           <div *ngIf="eDate?.invalid && eDate?.touched">
-            <small style="color: red; position: relative;bottom: 30px; right: 300px;" *ngIf="sDate?.errors?.['required']">End Date
+            <small style="color: red; position: relative;bottom: 30px; right: 300px;"
+              *ngIf="sDate?.errors?.['required']">End Date
               is
               required</small>
           </div>
@@ -123,11 +135,13 @@
 
       <div class="col-4">
         <label class="info">Location</label>
-        <select [class.is-invalid]="loc?.invalid &&loc?.touched" formControlName="location"  class="form-select" aria-label="Default select example">
-          <option selected>Location</option>
+        <select [class.is-invalid]="loc?.invalid &&loc?.touched" formControlName="location" class="form-select"
+          aria-label="Default select example">
+          <option selected *ngFor="let string of locationList">{{string}}</option>
         </select>
         <div *ngIf="loc?.invalid && loc?.touched">
-          <small style="color: red; position: relative;top: 10px; right: 200px;" *ngIf="sDate?.errors?.['required']">Location
+          <small style="color: red; position: relative;top: 10px; right: 200px;"
+            *ngIf="sDate?.errors?.['required']">Location
             is
             required</small>
         </div>

@@ -3,10 +3,11 @@
 <h2><b>Project Listing</b></h2>
 <nav class="sidebar">
   <ul>
-    <li><a href=""><img src="../../assets/Dashboard.svg" alt=""></a></li>
+    <li><a href="" (click)="toDashboard()"><img src="../../assets/Dashboard.svg" alt=""></a></li>
     <li><a href=""><img src="../../assets/Project-list-active.svg" alt=""></a></li>
     <hr style=" border: 1px black solid; ">
-    <li><a href=""><img (click)="toProjectCreation()" class="cActive" src="../../assets/create-project.svg" alt="">1</a></li>
+    <li><a href=""><img (click)="toProjectCreation()" class="cActive" src="../../assets/create-project.svg" alt="">1</a>
+    </li>
     <!-- Add more links as needed -->
   </ul>
 </nav>
@@ -19,36 +20,56 @@
     </svg>
     <form class="sForm">
       <mat-form-field class="example-full-width">
-    <input class="search-bar" matInput placeholder="Search">
-  </mat-form-field>
-  </form>
+        <input class="search-bar" matInput placeholder="Search">
+      </mat-form-field>
+    </form>
   </div>
-<div class="container">
-  <div class="row">
-    <div class="col-sm-2"><th>Project Name</th></div>
-    <div class="col-1"><th>Reason</th></div>
-    <div class="col-1"><th>Type</th></div>
-    <div class="col-1"><th>Division</th></div>
-    <div class="col-1"><th>Category</th></div>
-    <div class="col-1"><th>Priority</th></div>
-    <div class="col-1"><th>Dept.</th></div>
-    <div class="col-1"><th>Location</th></div>
-    <div class="col-1"><th>Status</th></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-2">
+        <th>Project Name</th>
+      </div>
+      <div class="col-1">
+        <th>Reason</th>
+      </div>
+      <div class="col-1">
+        <th>Type</th>
+      </div>
+      <div class="col-1">
+        <th>Division</th>
+      </div>
+      <div class="col-1">
+        <th>Category</th>
+      </div>
+      <div class="col-1">
+        <th>Priority</th>
+      </div>
+      <div class="col-1">
+        <th>Dept.</th>
+      </div>
+      <div class="col-1">
+        <th>Location</th>
+      </div>
+      <div class="col-1">
+        <th>Status</th>
+      </div>
+    </div>
+
+    <div class="row" *ngFor="let s of List">
+      <div class="col-2" id="pInfo">{{s.theme}}
+      <h5 >{{s.startDate}} to {{s.endDate}}</h5></div>
+      <div class="col-1" id="pInfo1">{{s.reason}}</div>
+      <div class="col-1" id="pInfo1">{{s.type}}</div>
+      <div class="col-1" id="pInfo1">{{s.division}}</div>
+      <div class="col-1" id="pInfo1">{{s.category}}</div>
+      <div class="col-1" id="pInfo1">{{s.priority}}</div>
+      <div class="col-1" id="pInfo1">{{s.dept}}</div>
+      <div class="col-1" id="pInfo1">{{s.location}}</div>
+      <div class="col-1" id="pInfo">{{s.status}}</div>
+      <input type="button" class="btn btn-primary" (click)="updateStatus(s,1)" value="Start">&nbsp;&nbsp;
+      <input type="button" class="btn btn-outline-primary"(click)="updateStatus(s,2)" value="Close">&nbsp;&nbsp;
+      <input style="padding: 10px;" type="button" class="btn btn-outline-primary" (click)="updateStatus(s,3)" value="Cancel">
+      <hr>
+    </div>
   </div>
-  <div class="row">
-    <div class="col-2" id="pInfo">Line Filter</div>
-    <div class="col-1" id="pInfo1">Business</div>
-    <div class="col-1" id="pInfo1">Internal</div>
-    <div class="col-1" id="pInfo1">Compressor</div>
-    <div class="col-1" id="pInfo1">Quality A</div>
-    <div class="col-1" id="pInfo1">High</div>
-    <div class="col-1" id="pInfo1">Strategy</div>
-    <div class="col-1" id="pInfo1">Pune</div>
-    <div class="col-1" id="pInfo">Registered</div>
-    <input type="button" class="btn btn-primary" value="Start">&nbsp;&nbsp;
-    <input type="button" class="btn btn-outline-primary" value="Close">&nbsp;&nbsp;
-    <input style="padding: 10px;" type="button" class="btn btn-outline-primary" value="Cancel">
-  </div>
-  <hr>
-</div>
 </form>

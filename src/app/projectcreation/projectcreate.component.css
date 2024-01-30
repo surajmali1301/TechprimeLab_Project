@@ -110,12 +110,16 @@ p {
   box-shadow: 0 5px 8px rgba(0, 0, 0, 1);
   padding-top: 20px;
 }
-
+.logOut {
+  position: relative;
+  left: 20px;
+  top: 280px;
+}
 .sidebar ul {
   list-style-type: none;
   padding: 0;
   position: relative;
-  top: 450px;
+  top: 200px;
 }
 
 .sidebar li {

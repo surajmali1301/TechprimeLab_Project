@@ -29,6 +29,7 @@ export class LogInComponent {
   login!: FormGroup;
   errorMessage: string = '';
 
+
   constructor(
     private _http: HttpClient,
     private _route: Router,
@@ -60,14 +61,15 @@ export class LogInComponent {
             this._route.navigate(['/Project']);
             this.login.reset();
           } else {
-            this.errorMessage = ' Credentials Does Not Match';
+            this.errorMessage = ' Invalid Credentials';
           }
         },
         (error: any) => {
-          alert('Hello')
+          alert('Hello');
           this.errorMessage = 'Login failed. Please check your credentials.';
           console.error('Error:', error);
         }
       );
   }
+
 }

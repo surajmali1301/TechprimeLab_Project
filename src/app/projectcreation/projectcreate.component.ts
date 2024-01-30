@@ -49,6 +49,7 @@ export class ProjectcreateComponent implements OnInit {
       startDate: ['', Validators.required],
       endDate: ['', Validators.required],
       location: ['', Validators.required],
+      status: ['new'],
     });
     this.router.paramMap.subscribe((x) => {
       this.queryValue = x.get('reason');
@@ -100,5 +101,8 @@ export class ProjectcreateComponent implements OnInit {
   }
   toLogOut() {
     this.route.navigate(['/login']);
+  }
+  toDashboard() {
+    this.route.navigate(['/dashboard']);
   }
 }

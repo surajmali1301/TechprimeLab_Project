@@ -68,6 +68,11 @@ small {
   left: 20px;
   font-size: 15px;
 }
+.hPass{
+  position: relative;
+  left: 300px;
+  bottom: 45px;
+}
 .error-message{
   font-size: 16px;
   position: fixed;
